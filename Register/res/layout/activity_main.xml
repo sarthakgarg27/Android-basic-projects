@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <EditText
+        android:id="@+id/usern"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="enter user name" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/PWD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/usern"
+        android:layout_below="@+id/usern"
+        android:layout_marginTop="17dp"
+        android:ems="10"
+        android:hint="enter password"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/REG"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/PWD"
+        android:layout_below="@+id/LOG"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="28dp"
+        android:text="register" />
+
+    <Button
+        android:id="@+id/LOG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/PWD"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="81dp"
+        android:text="Login" />
+
+</RelativeLayout>

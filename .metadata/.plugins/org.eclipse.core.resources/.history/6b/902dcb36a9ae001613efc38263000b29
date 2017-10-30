@@ -1,0 +1,51 @@
+package com.hackathon.dobbyps.parking_buddy;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
+
+public class MainActivity extends Activity {
+EditText pnr,dura ;
+Button b;
+ProgressBar p;
+RadioGroup rg;
+RadioButton day,h;int n,cost=0;
+
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		p=(ProgressBar) findViewById(R.id.progressBar1);
+		pnr=(EditText) findViewById(R.id.pnr1);
+		dura=(EditText) findViewById(R.id.DURATION);
+		rg=(RadioGroup) findViewById(R.id.RG);
+		day=(RadioButton) findViewById(R.id.D);
+		h=(RadioButton) findViewById(R.id.H);
+
+		
+	}
+
+	public void progress(View v){
+		n=Integer.parseInt(dura.getText().toString());
+		Toast.makeText(this,"cost:", Toast.LENGTH_LONG).show();
+		
+		if(day.isChecked())
+		{
+			cost=n*5;
+			Toast.makeText(this,"cost:"+cost, Toast.LENGTH_LONG).show();
+			
+			
+			
+		}
+		
+	}
+
+}
